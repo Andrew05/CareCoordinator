@@ -8,6 +8,7 @@ target 'CareProviderApp' do
   # Pods for CareProviderApp
    
    pod 'JSQMessagesViewController'
+   pod 'BEMCheckBox'
 
   target 'CareProviderAppTests' do
     inherit! :search_paths

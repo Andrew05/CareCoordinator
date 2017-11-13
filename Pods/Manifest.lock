@@ -1,15 +1,18 @@
 PODS:
+  - BEMCheckBox (1.4.1)
   - JSQMessagesViewController (7.3.5):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
 
 DEPENDENCIES:
+  - BEMCheckBox
   - JSQMessagesViewController
 
 SPEC CHECKSUMS:
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   JSQMessagesViewController: 6587f56aedbcb150a8ba1d968e1ef58b1bc758b7
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
 
-PODFILE CHECKSUM: 06771e03566e561834bdae11df3ce9940ed49771
+PODFILE CHECKSUM: 4f1009c889ab973b0af737ddb52b459e12b8ef1e
 
 COCOAPODS: 1.2.1

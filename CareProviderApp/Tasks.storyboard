@@ -17,13 +17,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bIq-g5-uzN">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="bIq-g5-uzN" customClass="TaskTableViewCell" customModule="CareProviderApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bIq-g5-uzN" id="xtN-o7-RBP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKk-X7-OL1">
+                                            <rect key="frame" x="8" y="38" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qk-sM-c4E">
+                                            <rect key="frame" x="8" y="22" width="42" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYK-fs-P96" customClass="BEMCheckBox">
+                                            <rect key="frame" x="347" y="30.5" width="20" height="20"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="gRg-zK-HuQ"/>
+                                                <constraint firstAttribute="height" constant="20" id="mEG-Mu-BQf"/>
+                                                <constraint firstAttribute="width" constant="208" id="vvW-Ao-pwf"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="vvW-Ao-pwf"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dKk-X7-OL1" firstAttribute="centerY" secondItem="xtN-o7-RBP" secondAttribute="centerY" constant="8" id="JJG-Y9-FOn"/>
+                                        <constraint firstItem="6Qk-sM-c4E" firstAttribute="leading" secondItem="xtN-o7-RBP" secondAttribute="leading" constant="8" id="LZn-88-aZ5"/>
+                                        <constraint firstItem="dKk-X7-OL1" firstAttribute="leading" secondItem="xtN-o7-RBP" secondAttribute="leading" constant="8" id="bEA-Nz-bA7"/>
+                                        <constraint firstAttribute="trailing" secondItem="QYK-fs-P96" secondAttribute="trailing" constant="8" id="boS-S6-u0e"/>
+                                        <constraint firstItem="6Qk-sM-c4E" firstAttribute="centerY" secondItem="xtN-o7-RBP" secondAttribute="centerY" constant="-8" id="fP5-ww-v7G"/>
+                                        <constraint firstItem="QYK-fs-P96" firstAttribute="centerY" secondItem="xtN-o7-RBP" secondAttribute="centerY" id="n78-w7-uGF"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="dKk-X7-OL1" id="Cs8-PX-PGv"/>
+                                    <outlet property="taskFinishedCheckBox" destination="QYK-fs-P96" id="4bv-Nx-uMR"/>
+                                    <outlet property="taskLabel" destination="6Qk-sM-c4E" id="rMO-l4-hzF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
