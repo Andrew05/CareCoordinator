@@ -14,11 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        
+       UINavigationBar.appearance().barTintColor = ProjectConstants().careCoordinatorThemeColor
+       UINavigationBar.appearance().tintColor = .white
+       UITabBar.appearance().tintColor = ProjectConstants().careCoordinatorThemeColor
 
         return true
     }
