@@ -1,6 +1,0 @@
-framework module Pods_CareProviderApp {
-  umbrella header "Pods-CareProviderApp-umbrella.h"
-
-  export *
-  module * { export * }
-}
