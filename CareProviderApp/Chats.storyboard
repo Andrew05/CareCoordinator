@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,13 +20,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gVJ-7l-x8b">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCell" rowHeight="107" id="gVJ-7l-x8b" customClass="ChatListTableViewCell" customModule="CareProviderApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="107"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gVJ-7l-x8b" id="I26-8x-CuJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="106.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultContact" translatesAutoresizingMaskIntoConstraints="NO" id="rl0-6g-DeD">
+                                            <rect key="frame" x="16" y="33" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="7ss-bQ-XND"/>
+                                                <constraint firstAttribute="width" constant="40" id="H3u-pl-dOr"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyM-U2-jMi">
+                                            <rect key="frame" x="64" y="27" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMv-P5-8YV">
+                                            <rect key="frame" x="64" y="52" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PMv-P5-8YV" firstAttribute="leading" secondItem="SyM-U2-jMi" secondAttribute="leading" id="1SE-9d-bLK"/>
+                                        <constraint firstItem="rl0-6g-DeD" firstAttribute="leading" secondItem="I26-8x-CuJ" secondAttribute="leadingMargin" constant="8" id="VxQ-xP-7gE"/>
+                                        <constraint firstItem="SyM-U2-jMi" firstAttribute="leading" secondItem="rl0-6g-DeD" secondAttribute="trailing" constant="8" id="e1l-Ju-z2M"/>
+                                        <constraint firstItem="rl0-6g-DeD" firstAttribute="centerY" secondItem="I26-8x-CuJ" secondAttribute="centerY" id="iLz-lY-2Kk"/>
+                                        <constraint firstItem="PMv-P5-8YV" firstAttribute="top" secondItem="SyM-U2-jMi" secondAttribute="bottom" constant="4" id="iaF-E1-CtG"/>
+                                        <constraint firstItem="SyM-U2-jMi" firstAttribute="centerY" secondItem="I26-8x-CuJ" secondAttribute="centerY" constant="-16" id="j5R-A2-5kb"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImage" destination="rl0-6g-DeD" id="jYw-JI-euy"/>
+                                    <outlet property="contactNameLabel" destination="SyM-U2-jMi" id="VI6-3Z-ZC7"/>
+                                    <outlet property="messageLabel" destination="PMv-P5-8YV" id="dhY-qQ-jSz"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,7 +72,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ilb-kB-Yvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2232.8000000000002" y="556.37181409295351"/>
+            <point key="canvasLocation" x="2239" y="555"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UcM-Ef-nRB">
@@ -143,4 +178,7 @@
             <point key="canvasLocation" x="1438" y="555"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultContact" width="40" height="40"/>
+    </resources>
 </document>

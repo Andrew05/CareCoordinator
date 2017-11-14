@@ -11,10 +11,12 @@ import UIKit
 
 class TaskListViewController: UITableViewController {
     
-    var tasks = [Task]()
+    var taskList = [Task]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
     
     
@@ -25,8 +27,13 @@ class TaskListViewController: UITableViewController {
         return 1
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell") as! TaskTableViewCell
         
-        return cell!
+        let task = taskList[indexPath.row]
+        
+        cell.taskLabel.text = task.taskName
+//        cell.dateLabel.text = task.taskDate
+        
+        return cell
     }
 }
