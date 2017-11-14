@@ -23,6 +23,7 @@
 		49CEC0061FB9420C00CA26CE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CEC0051FB9420C00CA26CE /* Task.swift */; };
 		49CEC0081FBA63CD00CA26CE /* ChatListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CEC0071FBA63CD00CA26CE /* ChatListTableViewController.swift */; };
 		49CEC00A1FBA65E100CA26CE /* ChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CEC0091FBA65E100CA26CE /* ChatListTableViewCell.swift */; };
+		49CEC00E1FBA7AD100CA26CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49CEC00D1FBA7AD000CA26CE /* GoogleService-Info.plist */; };
 		A04365C2901D74DDD990D014 /* Pods_CareProviderApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC0A401069E62E79EA94A86 /* Pods_CareProviderApp.framework */; };
 		CE3A4CE3474F4D1B8E6A1A65 /* Pods_CareProviderAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035F20AD1E54B7FEB86FD8CB /* Pods_CareProviderAppTests.framework */; };
 		D6D8BCE8AA1F962BB53684A4 /* Pods_CareProviderAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3CED1EBAC350747901FC28 /* Pods_CareProviderAppUITests.framework */; };
@@ -71,6 +72,7 @@
 		49CEC0051FB9420C00CA26CE /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		49CEC0071FBA63CD00CA26CE /* ChatListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewController.swift; sourceTree = "<group>"; };
 		49CEC0091FBA65E100CA26CE /* ChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTableViewCell.swift; sourceTree = "<group>"; };
+		49CEC00D1FBA7AD000CA26CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5960E194FC9083C6DAADD696 /* Pods-CareProviderAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareProviderAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareProviderAppTests/Pods-CareProviderAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		65BF0F5C0C212181FDAC009C /* Pods-CareProviderApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareProviderApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareProviderApp/Pods-CareProviderApp.debug.xcconfig"; sourceTree = "<group>"; };
 		99A21C1F272795C03A57CF17 /* Pods-CareProviderAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareProviderAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareProviderAppTests/Pods-CareProviderAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,18 +134,12 @@
 		49CEBFCA1FB8C9E900CA26CE /* CareProviderApp */ = {
 			isa = PBXGroup;
 			children = (
-				49CEBFF91FB8D21300CA26CE /* ChatViewController.swift */,
-				49CEBFFB1FB8DA0D00CA26CE /* Message.swift */,
+				49CEC00D1FBA7AD000CA26CE /* GoogleService-Info.plist */,
 				49CEBFCB1FB8C9E900CA26CE /* AppDelegate.swift */,
 				49CEBFCD1FB8C9E900CA26CE /* ViewController.swift */,
 				49CEBFCF1FB8C9E900CA26CE /* Main.storyboard */,
-				49CEBFFF1FB92C7E00CA26CE /* Chats.storyboard */,
-				49CEC0071FBA63CD00CA26CE /* ChatListTableViewController.swift */,
-				49CEC0091FBA65E100CA26CE /* ChatListTableViewCell.swift */,
-				49CEBFFD1FB8EBA700CA26CE /* Tasks.storyboard */,
-				49CEC0011FB936F800CA26CE /* TaskTableViewCell.swift */,
-				49CEC0031FB93E1C00CA26CE /* TaskListViewController.swift */,
-				49CEC0051FB9420C00CA26CE /* Task.swift */,
+				49CEC00B1FBA6B1000CA26CE /* Chat */,
+				49CEC00C1FBA6B2100CA26CE /* Task */,
 				49CEBFD21FB8C9EA00CA26CE /* Assets.xcassets */,
 				49CEBFD41FB8C9EA00CA26CE /* LaunchScreen.storyboard */,
 				49CEBFD71FB8C9EA00CA26CE /* Info.plist */,
@@ -167,6 +163,29 @@
 				49CEBFED1FB8C9EA00CA26CE /* Info.plist */,
 			);
 			path = CareProviderAppUITests;
+			sourceTree = "<group>";
+		};
+		49CEC00B1FBA6B1000CA26CE /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				49CEBFFF1FB92C7E00CA26CE /* Chats.storyboard */,
+				49CEBFFB1FB8DA0D00CA26CE /* Message.swift */,
+				49CEBFF91FB8D21300CA26CE /* ChatViewController.swift */,
+				49CEC0071FBA63CD00CA26CE /* ChatListTableViewController.swift */,
+				49CEC0091FBA65E100CA26CE /* ChatListTableViewCell.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		49CEC00C1FBA6B2100CA26CE /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				49CEBFFD1FB8EBA700CA26CE /* Tasks.storyboard */,
+				49CEC0011FB936F800CA26CE /* TaskTableViewCell.swift */,
+				49CEC0031FB93E1C00CA26CE /* TaskListViewController.swift */,
+				49CEC0051FB9420C00CA26CE /* Task.swift */,
+			);
+			path = Task;
 			sourceTree = "<group>";
 		};
 		B7081A11D2B91ADBD3D67B3D /* Frameworks */ = {
@@ -311,6 +330,7 @@
 				49CEBFFE1FB8EBA700CA26CE /* Tasks.storyboard in Resources */,
 				49CEBFD61FB8C9EA00CA26CE /* LaunchScreen.storyboard in Resources */,
 				49CEC0001FB92C7E00CA26CE /* Chats.storyboard in Resources */,
+				49CEC00E1FBA7AD100CA26CE /* GoogleService-Info.plist in Resources */,
 				49CEBFD31FB8C9EA00CA26CE /* Assets.xcassets in Resources */,
 				49CEBFD11FB8C9E900CA26CE /* Main.storyboard in Resources */,
 			);

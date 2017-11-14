@@ -9,6 +9,10 @@ target 'CareProviderApp' do
    
    pod 'JSQMessagesViewController'
    pod 'BEMCheckBox'
+   pod 'Firebase'
+   pod 'Firebase/Auth'
+   pod 'Firebase/Core'
+   pod 'Firebase/Messaging'
 
   target 'CareProviderAppTests' do
     inherit! :search_paths
